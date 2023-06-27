@@ -1,0 +1,152 @@
+<app-nav></app-nav>
+<!-- Section: Design Block -->
+
+<section class="text-center text-lg-start" style="background-image: url('./assets/2.png'); background-size: cover; background-position: center;">
+
+    <!-- Jumbotron -->
+  
+    <div class="container py-4">
+  
+      <div class="row g-0 align-items-center">
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+  
+          <div class="card cascading-right" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
+  
+            <div class="card-body p-5 shadow-5 text-center">
+  
+              <h2 class="fw-bold mb-5">Sign up now</h2>
+  
+              <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+  
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+  
+                <div class="row">
+  
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+  
+                      <label class="form-label" for="firstname">First name</label>
+  
+                      <input type="text" id="firstname" class="form-control" placeholder=" Firstname" formControlName="firstname" required />
+  
+                      <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="text-danger">
+  
+                        <div *ngIf="f['firstname'].errors?.['required']">Name is required.</div>
+  
+                        <div *ngIf="f['firstname'].errors?.['cannotContainSpace']">Cannot contain space</div>
+  
+                      </div>
+  
+                    </div>
+  
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+  
+                      <label class="form-label" for="lastname">Last name</label>
+  
+                      <input type="text" id="lastname" class="form-control" placeholder=" Lastname" formControlName="lastname" required />
+  
+                      <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="text-danger">
+  
+                        <div *ngIf="f['lastname'].errors?.['required']">Name is required.</div>
+  
+                        <div *ngIf="f['lastname'].errors?.['cannotContainSpace']">Cannot contain space</div>
+  
+                      </div>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder=" Username" formControlName="username" required />
+                    <div *ngIf="f['username'].touched && f['username'].invalid" class="text-danger">
+                      <div *ngIf="f['username'].errors?.['required']">Username is required.</div>
+                      <div *ngIf="f['username'].errors?.['cannotContainSpace']">Cannot contain space</div>
+                    </div>
+                  </div>
+  
+  
+  
+  
+                <!-- Email input -->
+  
+                <div class="form-outline mb-4">
+  
+                  <label class="form-label" for="form3Example3">Email address</label>
+  
+                  <input type="email" id="form3Example3" class="form-control" placeholder=" email " formControlName="email" />
+  
+                  <div *ngIf="f['email'].touched && f['email'].invalid" class="text-danger">
+  
+                    <div *ngIf="f['email'].errors?.['pattern']">Email is not the correct pattern.</div>
+  
+                    <div *ngIf="f['email'].errors?.['required']">Valid Email is required.</div>
+  
+                  </div>
+  
+                </div>
+  
+  
+  
+  
+                <!-- Password input -->
+  
+                <div class="form-outline mb-4">
+  
+                  <label class="form-label" for="email">Password</label>
+  
+                  <input type="password" id="email" class="form-control" placeholder=" password " formControlName="password" />
+  
+                  <div *ngIf="f['password'].touched && f['password'].invalid" class="text-danger">
+  
+                    <div *ngIf="f['password'].errors?.['required']">Password is required.</div>
+  
+                    <!-- <div *ngIf="f['password'].errors?.['minLength']">Please enter 6 characters</div> -->
+  
+                  </div>
+  
+                </div>
+  
+  
+  
+  
+                <!-- Submit button -->
+  
+                <div class="d-grid gap-2 d-md-block">
+  
+                  <button type="submit" class="btn btn-primary">Sign up</button>
+  
+                </div>
+  
+                <div>
+  
+                  <p class="mb-0">Already have an account? <button type="button" class="btn btn-secondary btn-block m-4" routerLink="/Login" routerLinkActive="highlight">Login</button></p>
+  
+                </div>
+  
+              </form>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+    <!-- Jumbotron -->
+  
+  </section>
+  
+  <!-- Section: Design Block -->

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="grid-container">
+      <div class="sidebar-container">
+        <ul class="sidebar-navigation">
+          <div class="card" style="width: 235px; background-color: #cc4f4f;">
+            <div id="userimg" style="width: 150px;">
+              <img [src]="'assets/male.png'" alt="Card image" style="width: 100%" />
+            </div>
+           
+          </div>
+  
+          <li>
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <label [routerLink]="['/addcourse']" style="cursor: pointer;">Add Course</label>
+          </li>
+          <li>
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          <label [routerLink]="['/editcourse']" style="cursor: pointer;">Edit Course</label>
+        </li>
+          <!-- Add other sidebar navigation items here -->
+        </ul>
+      </div>
+  
+      <div class="content-container">
+        <div class="welcome-message">
+          <h2>Welcome to Admin Dashboard - Elearning Management System</h2>
+        </div>
+  
+        <div class="dashboard-cards">
+          <div class="dashboard-card">
+            <div class="circle"><i id="icons" class="fa fa-user"></i></div>
+            <div class="text">Users</div>
+            <div class="sub-text">{{ users.length }} users</div>
+            <ul>
+                <li *ngFor="let user of users">
+                  <span>{{ user.firstname }}</span>
+                  <span>{{ user.lastname }}</span>
+                  <!-- Add other user details here -->
+                </li>
+              </ul>
+          </div>
+  
+          <div class="dashboard-card">
+            <div class="circle"><i id="icons" class="fa fa-trophy"></i></div>
+            <div class="text">Courses</div>
+            <div class="sub-text">{{ courses.length }} courses</div>
+            <ul>
+              <li *ngFor="let course of courses">{{ course.title }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

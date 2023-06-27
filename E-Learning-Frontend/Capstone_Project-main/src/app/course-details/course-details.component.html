@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Course Details</h1>
+  
+    <div>
+      <h2>{{ course.title }}</h2>
+      <p>{{ course.description }}</p>
+    </div>
+  
+    <h3>Topics</h3>
+    <ul>
+      <li *ngFor="let topic of course.topics">{{ topic }}</li>
+    </ul>
+  
+    <div>
+      <h3>Rate the Course</h3>
+      <form (ngSubmit)="rateCourse()">
+        <!-- Add rating input fields and submit button here -->
+      </form>
+    </div>
+  
+    <div>
+      <button class="btn btn-primary" (click)="registerCourse()">Register</button>
+    </div>
+  </div>
+  

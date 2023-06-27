@@ -1,0 +1,487 @@
+.con-con {
+
+
+
+
+ 
+
+
+
+
+    background-size: 1200px 800px;
+
+   
+
+    background-repeat: no-repeat;
+
+
+
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://macviewer.in/wp-content/uploads/2021/02/macbook-926425_960_720.jpg");
+
+
+
+
+    background-position: center;
+
+
+
+
+    padding: 20px;
+
+
+
+
+    min-height: 100vh;
+
+
+
+
+    color: #fff;
+
+
+
+
+  }
+
+
+
+  .na{
+
+
+
+
+    max-width: 400px;
+
+
+
+
+    margin: 0 auto;
+
+
+
+
+    float: left;
+
+
+
+
+    padding-left: 100px;
+
+
+
+
+    padding-top: px;
+
+
+
+
+    /* display: flex;
+
+
+
+
+    justify-content: flex-end;  */
+
+
+
+
+  }
+
+
+
+
+ 
+
+
+
+
+  .container {
+
+
+
+
+      max-width: 400px;
+
+
+
+
+      margin: 0 auto;
+
+
+
+
+      float: right;
+
+
+
+
+      padding-right: 100px;
+
+
+
+
+      display: flex;
+
+
+
+
+      justify-content: flex-end;
+
+
+
+
+     
+
+
+
+
+    }
+
+
+
+
+ 
+
+
+
+
+  .con {
+
+
+
+
+    max-width: 200px;
+
+
+
+
+    margin: 0 auto;
+
+
+
+
+    padding-top: 50px;
+
+
+
+
+   
+
+
+
+
+  }
+
+
+
+
+  /* .container {
+
+
+
+
+      display: flex;
+
+
+
+
+      justify-content: flex-end;
+
+
+
+
+    } */
+
+
+
+
+ 
+
+
+
+
+     
+
+
+
+
+    .form-group {
+
+
+
+
+      margin-bottom: 20px;
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    label {
+
+
+
+
+      display: block;
+
+
+
+
+      font-weight: bold;
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    input[type="text"],
+
+
+
+
+    input[type="email"],
+
+
+
+
+    textarea {
+
+
+
+
+      width: 100%;
+
+
+
+
+      padding: 10px;
+
+
+
+
+      border: 1px solid #ccc;
+
+
+
+
+      border-radius: 4px;
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    button[type="submit"] {
+
+
+
+
+      padding: 10px 20px;
+
+
+
+
+      background-color:black;
+
+
+
+
+      color: #fff;
+
+
+
+
+      border: none;
+
+
+
+
+      border-radius: 4px;
+
+
+
+
+      cursor: pointer;
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    button[type="submit"]:hover {
+
+
+
+
+      background-color:rgb(131, 128, 124);
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    .error {
+
+
+
+
+      color: red;
+
+
+
+
+      font-size: 14px;
+
+
+
+
+      margin-top: 5px;
+
+
+
+
+    }
+
+
+
+
+
+
+
+    .social-icons {
+
+
+
+
+      display: flex;
+
+
+
+
+      justify-content: center;
+
+
+
+
+      margin-bottom: 20px;
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    .icon-link {
+
+
+
+
+      display: inline-block;
+
+
+
+
+      margin-right: 10px;
+
+
+
+
+      /* padding-left: 0.5px; */
+
+
+
+
+      margin-left: 2px;
+
+
+
+
+      color: #e6e2e2ea;
+
+
+
+
+      font-size: 20px;
+
+
+
+
+      text-decoration: none;
+
+
+
+
+      transition: color 0.3s ease;
+
+
+
+
+    }
+
+
+
+
+   
+
+
+
+
+    .icon-link:hover {
+
+
+
+
+      color: #000;
+
+
+
+
+    }

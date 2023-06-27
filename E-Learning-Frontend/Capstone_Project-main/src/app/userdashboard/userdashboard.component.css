@@ -1,0 +1,205 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+.sidebar {
+    background-color: #f8f9fa;
+    height: 100vh;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  /* Navbar styles */
+.navbar {
+  padding: 10px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  font-size: xx-large;
+}
+
+.navbar-toggler {
+  color: #fff;
+  border: none;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.sidebar .nav-link {
+  color: #0b83f3;
+  margin-bottom: 10px;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 20px;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #0b83f3;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0972d9;
+}
+
+/* Additional styles can be added as needed */
+/* Navbar styles */
+.navbar {
+  padding: 10px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  font-size: xx-large;
+}
+
+.navbar-toggler {
+  color: #fff;
+  border: none;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.sidebar .nav-link {
+  color: #0b83f3;
+  margin-bottom: 10px;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 20px;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #0b83f3;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0972d9;
+}
+
+search-bar {
+
+    position: relative;
+
+    color: #333;
+
+  }
+
+ 
+
+  .search-bar input {
+
+    padding-left: 30px; /* Adjust the value to increase/decrease space for the icon */
+
+  }
+
+ 
+
+  .search-bar i {
+
+    position: absolute;
+
+    left: 10px; /* Adjust the value to align the icon as desired */
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgb(6,5,5);
+    font-size: 24px;
+  }
+  .container-fluid {
+    position: relative;
+  }
+  
+  
+  
+  
+  

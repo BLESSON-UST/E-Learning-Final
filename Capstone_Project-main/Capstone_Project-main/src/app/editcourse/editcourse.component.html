@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Edit Courses</h2>
+  <div class="row">
+    <div class="card" *ngFor="let course of courses">
+      <div class="card-body">
+        <h5 class="card-title">{{ course.title }}</h5>
+        <p class="card-text">{{ course.description }}</p>
+        <button class="btn btn-primary" [routerLink]="['/edit-course', course.id]">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

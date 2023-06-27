@@ -1,0 +1,133 @@
+<app-nav></app-nav>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">E-Learning Platform</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">My Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Certificates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Carousel -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide items -->
+      <div class="carousel-item active">
+        <img src="./assets/el1.jpg" height="300"  width="800" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/el2.jpg" height="300"  width="800" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/el3.jpg" height="300"  width="800"class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <!-- Course Categories -->
+  <div class="container mt-4">
+    <h2>Recently Added Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/p.jpg"  class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Programming</h5>
+            <p class="card-text">Explore the world of programming languages and software development.</p>
+            <a href="#" class="btn btn-primary" (click)="enrollNow()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/w.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Learn to build websites and web applications using popular web technologies.</p>
+            <a href="#" class="btn btn-primary" (click)="enrollNow()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/d.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Data Science</h5>
+            <p class="card-text">Dive into the world of data analysis, machine learning, and AI.</p>
+            <a href="#" class="btn btn-primary" (click)="enrollNow()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Featured Courses -->
+  <div class="container mt-4">
+    <h2>Featured Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/py.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Introduction to Python</h5>
+            <p class="card-text">Master the fundamentals of Python programming language.</p>
+            <a href="#" class="btn btn-primary" (click)="enrollNow()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/h.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HTML and CSS Basics</h5>
+            <p class="card-text">Learn the basics of HTML and CSS for building websites.</p>
+            <a href="#" class="btn btn-primary" (click)="enrollNow()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/ds.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Introduction to Data Science</h5>
+            <p class="card-text">Explore the foundations of data science and its applications.</p>
+            <a href="#" class="btn btn-primary" (click)="enrollNow()" >Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  
+  

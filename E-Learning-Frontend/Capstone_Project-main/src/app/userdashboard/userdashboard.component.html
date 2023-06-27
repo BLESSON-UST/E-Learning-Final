@@ -1,0 +1,96 @@
+<div class="container-fluid" style="background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=883&q=80');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b83f3;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/Home">
+        <img src="./assets/lg.png" alt="" width="50" height="40">
+        <i class="navbar-brand" style="font-family: cursive; font-size: xx-large;">EduLearn</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/About">About</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="search-bar input-group">
+            <input type="text" class="form-control" [(ngModel)]="searchText" (input)="searchCourses()"
+              placeholder="Search for courses">
+            <span class="input-group-text"><i class="fa fa-search"></i></span>
+          </div>
+
+          <div class="btn-group ms-2">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path
+                  d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3.5 3a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 1a6 6 0 1 1 0 12A6 6 0 0 1 8 2z" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" (click)="displayDetails()">User Details</a>
+              </li>
+              <li>
+                <a class="dropdown-item" (click)="logout()">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-9">
+      <div class="main-content">
+        <h1>Welcome, {{ username }}!</h1>
+
+        <!-- User details section -->
+        <!-- <div *ngIf="showDetails" class="text-center">
+          <h3>User Details</h3>
+          <p>First Name: {{ userDetails?.firstname }}</p>
+          <p>Last Name: {{ userDetails?.lastname }}</p>
+          <p>Email: {{ userDetails?.email }}</p>
+          <p>Username: {{ userDetails?.username }}</p>
+        </div> -->
+
+        <!-- Enrolled courses -->
+        <h3 class="text-center">Your Enrolled Courses</h3>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let course of enrolledCourses">{{ course }}</li>
+        </ul>
+
+        <!-- Available courses -->
+        <h3 class="text-center">Available Courses</h3>
+        <div class="row justify-content-center">
+          <div class="col-md-4" *ngFor="let course of availableCourses">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ course.title }}</h5>
+                <p class="card-text">{{ course.description }}</p>
+                <a class="btn btn-primary" [routerLink]="['/Course', course.courseId]">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

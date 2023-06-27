@@ -1,0 +1,60 @@
+<app-nav></app-nav>
+<!-- Section: Design Block -->
+
+<section class="container-fluid text-center text-lg-start" style="position: relative; background-image: url('./assets/1.png'); background-size: cover; background-position: center;">
+
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+  
+      <div class="col-lg-4">
+  
+        <div class="card" style="background-color: rgba(255, 255, 255, 0.5);">
+  
+          <div class="card-body py-5 px-md-5 text-center">
+  
+            <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+  
+              <!-- Email input -->
+  
+              <h2 class="fw-bold mb-5">Login</h2>
+  
+               <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example1">Username</label>
+              <input type="text" id="form2Example1" class="form-control rounded-t-5" placeholder="Username" formControlName="username"/>
+            </div>
+              <!-- Password input -->
+  
+              <div class="form-outline mb-4">
+  
+                <label class="form-label" for="form2Example2">Password</label>
+  
+                <input type="password" id="form2Example2" class="form-control" placeholder="Password" formControlName="password"/>
+  
+              </div>
+  
+              <!-- Submit button -->
+  
+              <button type="button" class="btn btn-primary btn-block mb-4" (click)="loginSubmit()">Login</button>
+  
+              <!-- Register button -->
+  
+              <div>
+  
+                <p class="mb-0">Don't have an account? <button type="button" class="btn btn-secondary btn-block m-4" routerLink="/Signup" routerLinkActive="highlight">Sign Up</button>
+  
+                </p>
+  
+              </div>
+  
+            </form>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <!-- Section: Design Block -->

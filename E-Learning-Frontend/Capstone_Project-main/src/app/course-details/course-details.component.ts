@@ -9,7 +9,7 @@ import { CourseService } from '../course.service';
   styleUrls: ['./course-details.component.css']
 })
 export class CourseDetailsComponent implements OnInit {
-  courseId: number | any;
+  id: number | any;
   // course!: Course;
   course: Course = new Course('', '', []);
 
@@ -25,12 +25,12 @@ export class CourseDetailsComponent implements OnInit {
   //   });
   // }
   ngOnInit(): void {
-    console.log('Course ID:', this.courseId);
+    console.log('Course ID:', this.id);
 
   this.route.paramMap.subscribe(params => {
     const courseIdParam = params.get('courseId');
     if (courseIdParam) {
-      this.courseId = Number(courseIdParam);
+      this.id = Number(courseIdParam);
       this.getCourseDetails();
     } else {
       console.log('Invalid course ID');
@@ -50,8 +50,8 @@ export class CourseDetailsComponent implements OnInit {
   //   );
   // }
   getCourseDetails(): void {
-    console.log('Course ID:', this.courseId); // Add this line
-    this.courseService.getCourse(this.courseId).subscribe(
+    console.log('Course ID:', this.id); // Add this line
+    this.courseService.getCourse(this.id).subscribe(
       course => {
         this.course = course;
       },

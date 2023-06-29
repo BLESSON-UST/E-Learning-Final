@@ -23,7 +23,6 @@ public class Course {
 
         private String title;
         private String description;
-        private String imageurl;
 
         @OneToMany(targetEntity=Topic.class,
                 cascade=CascadeType.ALL,
@@ -33,7 +32,7 @@ public class Course {
         @JoinColumn(referencedColumnName = "id",name="course_id")
 
         List<Topic> topics ;
-    }
+}
 
 
 

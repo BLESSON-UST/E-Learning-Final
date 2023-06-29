@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SignupService } from '../signup.service';
-// import { CourseService } from '../course.service';
+import { CourseService } from '../course.service';
 
 interface Course {
+  id: number;
   courseId: number;
   title: string;
   description: string;
@@ -30,12 +31,14 @@ export class UserdashboardComponent implements OnInit {
     private http: HttpClient
   ) {}
 
+  
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.username = params['username'];
       this.getUserDetails();
       this.fetchAvailableCourses();
-      
+    
     });
   }
 
@@ -52,7 +55,7 @@ export class UserdashboardComponent implements OnInit {
   }
 
   displayDetails(): void {
-    if (!this.showDetails) {
+    if (this.showDetails) {
       this.getUserDetails(); 
     }
   }
@@ -75,7 +78,7 @@ export class UserdashboardComponent implements OnInit {
       .subscribe(
         data => {
           this.availableCourses = data.map((course: any) => ({
-            courseId: course.courseId,
+            id: course.id,
             title: course.title,
             description: course.description,
             // imageUrl: course.imageUrl
@@ -98,8 +101,56 @@ export class UserdashboardComponent implements OnInit {
     console.log('Search for courses:', this.searchText);
   }
 
-  navigateToCourse(courseId: number): void {
-    // Navigate to the course page using the provided course ID
-    this.router.navigate(['/Course', courseId]);
+  // goToCourseDetails(id: number) {
+  //   // Check if courseId is a valid number
+    
+  //   // if (isNaN(courseId) || courseId === undefined) {
+  //   //   console.error('Invalid courseId');
+  //   //   return;
+  //   // }
+  //   // console.log('Course ID:', courseId);
+  //   console.log(this.availableCourses);
+  
+  //   // Find the course details based on the courseId
+  //   const course = this.availableCourses.find((course) => course.id === id);
+  
+  //   if (course) {
+  //     // Navigate to the course details page using the course object or the courseId
+  //     // Replace 'course-details' with the actual route path for the course details page in your application
+  //     this.router.navigate(['/Course', course.id ]);
+  //   } else {
+  //     // Handle the case where the course is not found
+  //     console.error('Course not found');
+  //   }
+  // }
+  goToCourseDetails(id: number) {
+    // Find the course details based on the courseId
+    const course = this.availableCourses.find((course) => course.id === id);
+
+    if (course) {
+      // Navigate to the course details page using the course object or the courseId
+      // Replace 'course-details' with the actual route path for the course details page in your application
+      this.router.navigate(['/Course', course.id]);
+    } else {
+      // Handle the case where the course is not found
+      console.error('Course not found');
+    }
   }
+  // enrollNow(title: string) {
+  //   this.http.get<any>(`http://localhost:8081/courses/co/${title}`).subscribe(
+  //     (response) => {
+  //       const courseDetails = response;
+  //       // Perform further actions with the course details, such as displaying them in the UI
+  //       console.log(courseDetails);
+  //       this.router.navigate(['/Course'], { queryParams: { title: title }});
+  //     },
+  //     (error) => {
+  //       console.error(error);
+  //     }
+  //   );
+  // }
+  
+
 }
+   
+

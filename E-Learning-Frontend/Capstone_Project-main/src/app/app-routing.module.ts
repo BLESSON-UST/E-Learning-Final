@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'Contact',component:ContactusComponent},
   {path: 'Addcourse',component:CourseformComponent},
   {path: 'Editcourse',component:EditcourseComponent},
-  {path: 'Course/:courseId',component:CourseDetailsComponent},
+  {path: 'Course/:id',component:CourseDetailsComponent},
   { path: '', redirectTo: 'Home', pathMatch: 'full'}
 ];
 

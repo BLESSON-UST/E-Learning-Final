@@ -7,6 +7,7 @@ import com.course.CourseService.model.Topic;
 import com.course.CourseService.repository.CourseRepository;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -28,13 +29,13 @@ public class CourseService {
         return courseRepository.save(course);
     }
 
-    public List<Topic> getCourseTopics(Long courseId) {
-        Optional<Course> courseOptional = courseRepository.findById(courseId);
+    public List<Topic> getCourseTopics(Long id) {
+        Optional<Course> courseOptional = courseRepository.findById(id);
         if (courseOptional.isPresent()) {
             Course course = courseOptional.get();
             return course.getTopics();
         }
-        throw new CourseNotFoundException("Course not found with ID: " + courseId);
+        throw new CourseNotFoundException("Course not found with ID: " + id);
     }
 
     public Course getCourseId(Long courseId) {
@@ -48,5 +49,15 @@ public class CourseService {
 
     public List<Course> getall() {
         return courseRepository.findAll();
+    }
+
+    public Course getCourseTitle(String title) {
+        Optional<Course> existingCourse= courseRepository.findByTitle(title);
+        if(existingCourse.isPresent())
+        {
+            Course course=existingCourse.get();
+            return course;
+        }
+        throw new CourseNotFoundException("Course not found with title " + title);
     }
 }

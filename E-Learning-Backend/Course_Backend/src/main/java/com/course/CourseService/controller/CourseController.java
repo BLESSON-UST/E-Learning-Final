@@ -40,6 +40,13 @@ public class CourseController {
         return ResponseEntity.ok(course);
     }
 
+    @GetMapping("/co/{title}")
+    public ResponseEntity<Course> getCourseTitle(@PathVariable String title)
+    {
+        Course course=courseService.getCourseTitle(title);
+        return ResponseEntity.ok().body(course);
+    }
+
     @GetMapping("/all")
     public ResponseEntity<List<Course>> getall()
     {

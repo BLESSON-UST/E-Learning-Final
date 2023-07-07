@@ -126,6 +126,7 @@ export class UserdashboardComponent implements OnInit {
   goToCourseDetails(id: number) {
     // Find the course details based on the courseId
     const course = this.availableCourses.find((course) => course.id === id);
+    console.log(course);
 
     if (course) {
       // Navigate to the course details page using the course object or the courseId

@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginForm.value).subscribe(
       (response: any) => {
         localStorage.setItem('token', response.token);
+        
 
         if (response.token) {
           const username = this.loginForm.value.username;
@@ -47,6 +48,7 @@ export class LoginComponent implements OnInit {
           } else {
             // Redirect to user dashboard
             this.router.navigate(['/User',username]);
+            
           }
         } else {
           alert('Invalid username or password.');

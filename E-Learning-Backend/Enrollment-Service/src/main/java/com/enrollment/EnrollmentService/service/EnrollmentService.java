@@ -24,7 +24,7 @@ public class EnrollmentService {
    private EnrolmentRepository  enrolmentRepository;
 
         public User fetchUserDetails(Long userId) {
-            String userMicroserviceUrl = "http://localhost:8088/api/{userId}";
+            String userMicroserviceUrl = "http://localhost:8088/api/{id}";
             ResponseEntity<User> response = restTemplate.exchange(userMicroserviceUrl, HttpMethod.GET, null, User.class, userId);
             return response.getBody();
         }

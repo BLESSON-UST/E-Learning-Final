@@ -8,13 +8,11 @@ import com.enrollment.EnrollmentService.model.Enrollment;
 import com.enrollment.EnrollmentService.service.EnrollmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/enrollments")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class EnrollmentController {
 
     private final EnrollmentService enrollmentService;

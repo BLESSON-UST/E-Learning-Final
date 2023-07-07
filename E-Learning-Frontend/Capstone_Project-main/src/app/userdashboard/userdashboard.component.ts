@@ -101,28 +101,7 @@ export class UserdashboardComponent implements OnInit {
     console.log('Search for courses:', this.searchText);
   }
 
-  // goToCourseDetails(id: number) {
-  //   // Check if courseId is a valid number
-    
-  //   // if (isNaN(courseId) || courseId === undefined) {
-  //   //   console.error('Invalid courseId');
-  //   //   return;
-  //   // }
-  //   // console.log('Course ID:', courseId);
-  //   console.log(this.availableCourses);
-  
-  //   // Find the course details based on the courseId
-  //   const course = this.availableCourses.find((course) => course.id === id);
-  
-  //   if (course) {
-  //     // Navigate to the course details page using the course object or the courseId
-  //     // Replace 'course-details' with the actual route path for the course details page in your application
-  //     this.router.navigate(['/Course', course.id ]);
-  //   } else {
-  //     // Handle the case where the course is not found
-  //     console.error('Course not found');
-  //   }
-  // }
+
   goToCourseDetails(id: number) {
     // Find the course details based on the courseId
     const course = this.availableCourses.find((course) => course.id === id);
@@ -137,19 +116,7 @@ export class UserdashboardComponent implements OnInit {
       console.error('Course not found');
     }
   }
-  // enrollNow(title: string) {
-  //   this.http.get<any>(`http://localhost:8081/courses/co/${title}`).subscribe(
-  //     (response) => {
-  //       const courseDetails = response;
-  //       // Perform further actions with the course details, such as displaying them in the UI
-  //       console.log(courseDetails);
-  //       this.router.navigate(['/Course'], { queryParams: { title: title }});
-  //     },
-  //     (error) => {
-  //       console.error(error);
-  //     }
-  //   );
-  // }
+
   
 
 }
